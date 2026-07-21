@@ -1,0 +1,22 @@
+# Copy to terraform.tfvars (gitignored) and fill in real values for your account.
+
+# AWS profile — omit / leave commented to use the default credential chain
+# (env vars, SSO, or an instance role).
+# profile = "your-aws-profile"
+
+region = "us-east-2"
+
+# DNS zone for zrok. A wildcard *.<dns_zone> A record is created pointing at the
+# instance's Elastic IP. You must own a public Route53 hosted zone that contains it.
+dns_zone       = "share.example.com"
+hosted_zone_id = "Z0XXXXXXXXXXXXXXXXXXX"
+
+# Network — a VPC and a single public subnet (one AZ). The subnet is given a
+# public route table (0.0.0.0/0 -> IGW) by this stack if it lacks one.
+vpc_id    = "vpc-xxxxxxxxxxxxxxxxx"
+subnet_id = "subnet-xxxxxxxxxxxxxxxxx"
+
+# Optional overrides (defaults shown):
+# instance_type  = "t4g.small"
+# root_volume_gb = 30
+# admin_ssh_cidr = ""   # e.g. "203.0.113.4/32" to open SSH; default uses SSM only
