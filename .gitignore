@@ -1,0 +1,37 @@
+# ── Terraform ────────────────────────────────────────────────────────────────
+# State contains secrets (imported SSM values) — NEVER commit.
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Plan output may contain secrets.
+*.tfplan
+tfplan
+plan.out
+
+# Provider plugins / modules cache.
+.terraform/
+.terraform.tfstate.lock.info
+
+# Crash logs.
+crash.log
+crash.*.log
+
+# Variable files may hold secrets (keep *.example).
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# CLI config / credentials.
+.terraformrc
+terraform.rc
+
+# NOTE: .terraform.lock.hcl IS committed (dependency lock) — do not ignore it.
+
+# ── Local / OS / editor ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
