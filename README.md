@@ -128,3 +128,7 @@ instance cuts it to ~$14/mo. Single instance, single AZ = **no HA** by design.
 ```bash
 cd terraform && terraform destroy
 ```
+
+## License
+
+[MIT](LICENSE) © 2026 Martin Forde <mforde84@gmail.com>, [Blik Labs](https://bliklabs.com).
